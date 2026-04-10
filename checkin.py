@@ -75,7 +75,7 @@ def load_config() -> Tuple[str, List[str], str]:
              logger.info(f"使用指定的兑换计划: {exchange_plan}")
         else:
             logger.warning(f"环境变量 '{ENV_EXCHANGE_PLAN}' 的值 '{exchange_plan_env}' 无效，将使用默认兑换计划 'plan500'。")
-            exchange_plan = "plan500"
+            exchange_plan = None
 
 
     logger.info(f"共加载了 {len(cookies_list)} 个 Cookie 用于签到。")
